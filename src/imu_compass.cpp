@@ -38,7 +38,7 @@ IMUCompass::IMUCompass(ros::NodeHandle &n) :
 
   ROS_INFO("Using magnetometer bias (x,y):%f,%f", mag_zero_x_, mag_zero_y_);
 
-  ros::param::param("~compass/sensor_timeout", sensor_timeout_, 0.5);
+  ros::param::param("~compass/sensor_timeout", sensor_timeout_, 0.9);
   ros::param::param("~compass/yaw_meas_variance", yaw_meas_variance_, 10.0);
   ros::param::param("~compass/gyro_meas_variance", heading_prediction_variance_, 0.01);
   ROS_INFO("Using variance %f", yaw_meas_variance_);
